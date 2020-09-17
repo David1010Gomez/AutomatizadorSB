@@ -22,4 +22,4 @@ namespace AutomatizadorSB
             ServiceBase.Run(ServicesToRun);
         }
     }
-}
+} 
