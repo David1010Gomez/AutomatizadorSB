@@ -1,4 +1,6 @@
-﻿using AutomatizadorSB.Servicio;
+﻿using AutomatizadorSB.Repositorio;
+using AutomatizadorSB.Servicio;
+using AutomatizadorSB.Test;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +15,15 @@ namespace AutomatizadorSB
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
-        static void Main()
+        static async Task Main()
         {
-            ServicioSlack s = new ServicioSlack("aa");
-            s.ObtenerMensajesSlack();
+            TestMongo tm = new TestMongo();
+            await tm.insertarMensajeAsync();
+            await tm.seleccionarTodos();
+
+
+
+
             //ServiceBase[] ServicesToRun;
             ///ServicesToRun = new ServiceBase[]
             //{
