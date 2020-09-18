@@ -15,14 +15,8 @@ namespace AutomatizadorSB
         /// </summary>
         static void Main()
         {
-            var urlWithAccessToken = "https://hooks.slack.com/services/{YOUR}/{ACCESS}/{TOKENS}";
-
-
-            var client = new ServicioSlack(urlWithAccessToken);
-
-            client.PostMessage(username: "Mr. Torgue",
-                       text: "THIS IS A TEST MESSAGE! SQUEEDLYBAMBLYFEEDLYMEEDLYMOWWWWWWWW!",
-                       channel: "#voboestabilizacioncore");
+            ServicioSlack s = new ServicioSlack("aa");
+            s.ObtenerMensajesSlack();
             //ServiceBase[] ServicesToRun;
             ///ServicesToRun = new ServiceBase[]
             //{
