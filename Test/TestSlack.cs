@@ -33,6 +33,11 @@ namespace AutomatizadorSB.Test
                            channel: "#voboestabilizacioncore");
         }
 
+        public void obtenerMensajesSlack() {
+            ServicioSlack s = new ServicioSlack("aa");
+            s.ObtenerMensajesSlack();
+        }
+
 
 
     }
